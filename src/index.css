@@ -1,0 +1,26 @@
+@import './styles/animations.css';
+@import './styles/theme.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-gray-100 antialiased;
+  }
+
+  ::selection {
+    @apply bg-purple-500/30 text-white;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-gradient-light {
+    @apply bg-gradient-to-r from-purple-200 to-blue-200 bg-clip-text text-transparent;
+  }
+}
